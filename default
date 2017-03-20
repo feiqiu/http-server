@@ -44,12 +44,56 @@ server {
         proxy_pass http://127.0.0.1:8888;
         }
 
-	location ~ \.(gif|jpg|png|txt)$ {
-        root /home/share/http_server;
-    	}
+	#location ~ \.(gif|jpg|png|txt)$ {
+        #root /home/share/http_server;
+    	#}
 
 	
 
+	location /an_index.html {
+	root /home/share/http_server/app;
+        }
+
+	location /app.config.js {
+	root /home/share/http_server/app;
+        }
+
+		
+			location /app.css {
+	root /home/share/http_server/app;
+        }
+
+		
+			location /app.module.js {
+	root /home/share/http_server/app;
+        }
+
+		
+			location /bower_components {
+	root /home/share/http_server/app;
+        }
+
+		
+			location /core {
+	root /home/share/http_server/app;
+        }
+	
+			location /img {
+	root /home/share/http_server/app;
+        }
+	
+			location /phone-detail  {
+	root /home/share/http_server/app;
+        }
+	
+			location /phone-list {
+	root /home/share/http_server/app;
+        }	
+
+			location /phones {
+	root /home/share/http_server/app;
+        }	
+		
 	location /u.html {
         root /home/share/http_server;
         }
